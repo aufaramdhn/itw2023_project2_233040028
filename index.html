@@ -10,23 +10,21 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <style>
-      @media screen and (max-width: 800px) {
-        .wrap {
-          flex-wrap: wrap;
-        }
-      }
-      @media screen and (max-width: 1060px) {
-        .wrap {
-          flex-wrap: wrap;
-        }
-      }
-    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0 z-1"
+      class="navbar navbar-expand-lg bg-body-tertiary bg-light position-sticky top-0"
+      style="z-index: 99"
     >
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -43,11 +41,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Product</a>
-            <a class="nav-link" href="#">Gallery</a>
-            <a class="nav-link" aria-disabled="true">Contact</a>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#product">Product</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" style="cursor: pointer">
+              <i class="ri-shopping-cart-line"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -55,127 +56,175 @@
     <!-- END NAVBAR -->
 
     <!-- HERO -->
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/img/hero1.jpg" class="d-block w-100" alt="..." />
+    <section id="home">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
-        <div class="carousel-item">
-          <img src="assets/img/hero2.jpg" class="d-block w-100" alt="..." />
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="assets/img/hero1.jpg"
+              class="d-block w-100 hero"
+              alt="..."
+            />
+            <div
+              class="carousel-caption position-absolute text-center d-none d-md-flex flex-md-column"
+              style="top: 245px"
+            >
+              <h5>Lorem ipsum dolor sit amet.</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptates, cumque?
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="assets/img/hero2.jpg"
+              class="d-block w-100 hero"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/img/hero3.jpg"
+              class="d-block w-100 hero"
+              alt="..."
+            />
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="assets/img/hero3.jpg" class="d-block w-100" alt="..." />
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </section>
     <!-- END HERO -->
 
     <!-- ABOUT -->
-
-    <div class="container py-5">
-      <div class="text-center py-5">
-        <h1>About</h1>
+    <section id="about" class="py-3 py-md-5">
+      <div class="container">
+        <div class="text-center py-5">
+          <h1>About</h1>
+        </div>
+        <div class="d-flex gap-3 wrap justify-content-center">
+          <img src="assets/img/hero1.jpg" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum
+            minima eum distinctio obcaecati laboriosam cupiditate iste atque
+            voluptates, harum ipsa rem. Molestias iusto quo fugiat
+            reprehenderit, blanditiis quos dicta cumque nisi ipsum voluptatem
+            eligendi praesentium dolorem rem, iure, enim numquam ducimus eaque.
+            Minima animi excepturi iusto nemo explicabo minus, facere
+            accusantium sapiente culpa sint eum deleniti, voluptatibus quibusdam
+            illum. Deleniti quae, voluptatibus quia natus placeat odio! Magni
+            voluptas expedita ratione, ducimus vero architecto ipsum. Quo quod
+            corporis soluta perferendis illum, reiciendis ab. Natus et omnis
+            aperiam perspiciatis. Voluptates consequuntur rem cum beatae facere
+            labore debitis iusto expedita quod nesciunt.
+          </p>
+        </div>
       </div>
-      <div class="d-flex wrap justify-content-center">
-        <!-- <img src="" alt="" srcset=""> -->
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-          delectus quae dolorem repellendus officiis quidem sapiente sunt
-          aliquid! Perspiciatis vitae veritatis nesciunt possimus amet
-          aspernatur eveniet facilis neque ad distinctio. Tempora at, ea,
-          necessitatibus repudiandae illum dolores voluptate autem hic quae quia
-          corrupti voluptas distinctio animi facilis blanditiis laborum
-          accusantium inventore corporis quaerat pariatur sit? Voluptates
-          excepturi dicta, assumenda beatae fuga eligendi ab, molestiae
-          similique hic eos nisi itaque optio at iure alias fugit tempora
-          tempore adipisci ducimus vitae asperiores distinctio! Incidunt iure
-          veniam ratione culpa! Quae iusto aliquam voluptatem, odio ad eum enim
-          rerum distinctio? Magni dolor quasi ullam?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum
-          minima eum distinctio obcaecati laboriosam cupiditate iste atque
-          voluptates, harum ipsa rem. Molestias iusto quo fugiat reprehenderit,
-          blanditiis quos dicta cumque nisi ipsum voluptatem eligendi
-          praesentium dolorem rem, iure, enim numquam ducimus eaque. Minima
-          animi excepturi iusto nemo explicabo minus, facere accusantium
-          sapiente culpa sint eum deleniti, voluptatibus quibusdam illum.
-          Deleniti quae, voluptatibus quia natus placeat odio! Magni voluptas
-          expedita ratione, ducimus vero architecto ipsum. Quo quod corporis
-          soluta perferendis illum, reiciendis ab. Natus et omnis aperiam
-          perspiciatis. Voluptates consequuntur rem cum beatae facere labore
-          debitis iusto expedita quod nesciunt.
-        </p>
-      </div>
-    </div>
+    </section>
 
     <!-- END ABOUT -->
 
     <!-- PRODUCT -->
 
-    <section id="product">
+    <section id="product" class="py-3 py-md-5">
+      <div class="text-center py-5">
+        <h1>Product</h1>
+      </div>
       <div class="container py-5">
-        <div class="text-center py-5">
-          <h1>Product</h1>
-        </div>
-        <div class="d-flex wrap gap-4 mb-4 mb-md-0">
-          <div class="card mb-4 mb-md-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            sequi iure, ut, sunt assumenda odit aliquam molestiae, natus
-            voluptates in animi ad et? Officia provident sed modi est assumenda,
-            voluptates commodi magnam itaque culpa quaerat quas? Eum atque,
-            ducimus ipsam laboriosam ipsum tempore deleniti ratione animi vitae,
-            architecto, placeat quam.
+        <div
+          class="d-flex wrap flex-w justify-content-center align-items-center gap-4 mb-4 mb-md-0"
+          style=""
+        >
+          <div class="card p-2" style="width: 18rem">
+            <img
+              src="assets/img/hero1.jpg"
+              class="card-img-top"
+              width="350"
+              height="200"
+            />
+            <div class="">
+              <h5 class="py-2">Contoh product</h5>
+              <div class="d-flex justify-content-around">
+                <button class="btn btn-primary">$25</button>
+                <button class="btn btn-outline-primary">Add to cart</button>
+              </div>
+            </div>
           </div>
-          <div class="card mb-4 mb-md-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            sequi iure, ut, sunt assumenda odit aliquam molestiae, natus
-            voluptates in animi ad et? Officia provident sed modi est assumenda,
-            voluptates commodi magnam itaque culpa quaerat quas? Eum atque,
-            ducimus ipsam laboriosam ipsum tempore deleniti ratione animi vitae,
-            architecto, placeat quam.
+          <div class="card" style="width: 14rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
-          <div class="card mb-4 mb-md-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            sequi iure, ut, sunt assumenda odit aliquam molestiae, natus
-            voluptates in animi ad et? Officia provident sed modi est assumenda,
-            voluptates commodi magnam itaque culpa quaerat quas? Eum atque,
-            ducimus ipsam laboriosam ipsum tempore deleniti ratione animi vitae,
-            architecto, placeat quam.
+          <div class="card" style="width: 14rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
-          <div class="card mb-4 mb-md-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            sequi iure, ut, sunt assumenda odit aliquam molestiae, natus
-            voluptates in animi ad et? Officia provident sed modi est assumenda,
-            voluptates commodi magnam itaque culpa quaerat quas? Eum atque,
-            ducimus ipsam laboriosam ipsum tempore deleniti ratione animi vitae,
-            architecto, placeat quam.
-          </div>
-          <div class="card mb-4 mb-md-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            sequi iure, ut, sunt assumenda odit aliquam molestiae, natus
-            voluptates in animi ad et? Officia provident sed modi est assumenda,
-            voluptates commodi magnam itaque culpa quaerat quas? Eum atque,
-            ducimus ipsam laboriosam ipsum tempore deleniti ratione animi vitae,
-            architecto, placeat quam.
+          <div class="card" style="width: 14rem">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
         </div>
       </div>
@@ -183,49 +232,124 @@
 
     <!-- END PRODUCT -->
 
+    <!-- GALLERY -->
+
+    <section id="gallery" class="py-3 py-md-5 overflow-hidden">
+      <div class="text-center mb-5 pt-5">
+        <h1>Gallery</h1>
+      </div>
+      <div class="position-relative">
+        <div class="shape position-relative">
+          <div class="d-flex gap-1 overflow-x-scroll">
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+
+            <img
+              src="assets/img/hero2.jpg"
+              height="300"
+              alt=""
+              class="img-gallery"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END GALLERY -->
+
     <!-- CONTACT -->
 
-    <section id="contact">
-      <div class="w-50 mx-auto">
-        <form action="">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Full Name</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter full name"
-            />
+    <section id="contact" class="py-3 py-md-5 bg-dark">
+      <div class="container">
+        <div class="text-center text-white my-5">
+          <h1>Contact Me</h1>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1643582748833!2d106.9053212695394!3d-6.438023266949324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebbd7d726f4d%3A0x267ada501ca09f86!2sAufa%20Ramadhan!5e0!3m2!1sen!2sid!4v1704086484469!5m2!1sen!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter email address"
-            />
+          <div class="col-6">
+            <form action="">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Full Name</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter full name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter email address"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control res"
+                  id="exampleFormControlTextarea1"
+                  rows="4"
+                  cols="4"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary">Primary</button>
+              </div>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Message</label
-            >
-            <textarea
-              class="form-control res"
-              id="exampleFormControlTextarea1"
-              rows="4"
-              cols="4"
-              placeholder="Enter your message"
-            ></textarea>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button type="button" class="btn btn-primary">Primary</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -233,11 +357,28 @@
 
     <!-- FOOTER -->
 
+    <footer id="footer" class="bg-light text-center py-4">
+      <span>Made with <span> &#10084; </span>, </span>
+      <span>© 2023 Copyright: </span>
+      <a> codefaa. </a>
+    </footer>
+
     <!-- END FOOTER -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("cls", () => ({
+          cls: [
+            { id: 1, label: "Red" },
+            { id: 2, label: "Orange" },
+            { id: 3, label: "Yellow" },
+          ],
+        }));
+      });
+    </script>
   </body>
 </html>
