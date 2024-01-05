@@ -3,22 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>ZanCookies | Store</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Geologica&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="overflow-x-hidden">
     <!-- NAVBAR -->
@@ -27,7 +42,7 @@
       style="z-index: 99"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand logo" href="#">ZanCookies</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,12 +58,9 @@
           <div class="navbar-nav ms-auto">
             <a class="nav-link" href="#home">Home</a>
             <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#product">Product</a>
             <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#product">Product</a>
             <a class="nav-link" href="#contact">Contact</a>
-            <a class="nav-link" style="cursor: pointer">
-              <i class="ri-shopping-cart-line"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -91,16 +103,6 @@
               class="d-block w-100 hero"
               alt="..."
             />
-            <div
-              class="carousel-caption position-absolute text-center d-none d-md-flex flex-md-column"
-              style="top: 245px"
-            >
-              <h5>Lorem ipsum dolor sit amet.</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptates, cumque?
-              </p>
-            </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img
@@ -115,6 +117,17 @@
               class="d-block w-100 hero"
               alt="..."
             />
+          </div>
+          <div
+            class="position-absolute text-center w-100 text-white hero-text"
+            style="top: 245px"
+            data-aos="zoom-in"
+          >
+            <h5>Lorem ipsum dolor sit amet.</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates, cumque?
+            </p>
           </div>
         </div>
         <button
@@ -142,12 +155,12 @@
     <!-- ABOUT -->
     <section id="about" class="py-3 py-md-5">
       <div class="container">
-        <div class="text-center py-5">
-          <h1>About</h1>
+        <div class="text-center py-5" data-aos="fade-down">
+          <h1>About <span>Us</span></h1>
         </div>
         <div class="d-flex gap-3 wrap justify-content-center">
-          <img src="assets/img/hero1.jpg" />
-          <p>
+          <img src="assets/img/hero1.jpg" class="mx-2" data-aos="fade-right" />
+          <p data-aos="fade-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum
             minima eum distinctio obcaecati laboriosam cupiditate iste atque
             voluptates, harum ipsa rem. Molestias iusto quo fugiat
@@ -167,80 +180,15 @@
 
     <!-- END ABOUT -->
 
-    <!-- PRODUCT -->
-
-    <section id="product" class="py-3 py-md-5">
-      <div class="text-center py-5">
-        <h1>Product</h1>
-      </div>
-      <div class="container py-5">
-        <div
-          class="d-flex wrap flex-w justify-content-center align-items-center gap-4 mb-4 mb-md-0"
-          style=""
-        >
-          <div class="card p-2" style="width: 18rem">
-            <img
-              src="assets/img/hero1.jpg"
-              class="card-img-top"
-              width="350"
-              height="200"
-            />
-            <div class="">
-              <h5 class="py-2">Contoh product</h5>
-              <div class="d-flex justify-content-around">
-                <button class="btn btn-primary">$25</button>
-                <button class="btn btn-outline-primary">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" style="width: 14rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 14rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 14rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- END PRODUCT -->
-
     <!-- GALLERY -->
 
-    <section id="gallery" class="py-3 py-md-5 overflow-hidden">
-      <div class="text-center mb-5 pt-5">
+    <section id="gallery" class="py-5 overflow-hidden">
+      <div class="text-center py-5" data-aos="fade-down">
         <h1>Gallery</h1>
       </div>
       <div class="position-relative">
         <div class="shape position-relative">
-          <div class="d-flex gap-1 overflow-x-scroll">
+          <div class="d-flex gap-1 overflow-x-scroll justify-content-md-center">
             <img
               src="assets/img/hero2.jpg"
               height="300"
@@ -288,67 +236,121 @@
     </section>
 
     <!-- END GALLERY -->
+    <!-- PRODUCT -->
+
+    <section id="product" class="py-3 py-md-5">
+      <div class="text-center py-5" data-aos="fade-down">
+        <h1>Product</h1>
+      </div>
+      <div class="container py-5">
+        <div
+          class="d-flex wrap flex-w justify-content-center align-items-center gap-4 mb-4 mb-md-0"
+          style=""
+        >
+          <div class="card p-2" data-aos="fade-up" style="width: 16rem">
+            <img
+              src="assets/img/hero1.jpg"
+              class="card-img-top"
+              width="350"
+              height="200"
+            />
+            <div class="">
+              <h5 class="pt-2 card-title">Contoh product</h5>
+              <button class="btn btn-primary">Buy</button>
+            </div>
+          </div>
+          <div class="card p-2" data-aos="fade-up" style="width: 16rem">
+            <img
+              src="assets/img/hero1.jpg"
+              class="card-img-top"
+              width="350"
+              height="200"
+            />
+            <div class="">
+              <h5 class="pt-2 card-title">Contoh product</h5>
+              <button class="btn btn-primary">Buy</button>
+            </div>
+          </div>
+          <div class="card p-2" data-aos="fade-up" style="width: 16rem">
+            <img
+              src="assets/img/hero1.jpg"
+              class="card-img-top"
+              width="350"
+              height="200"
+            />
+            <div class="">
+              <h5 class="pt-2 card-title">Contoh product</h5>
+              <button class="btn btn-primary">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END PRODUCT -->
 
     <!-- CONTACT -->
 
     <section id="contact" class="py-3 py-md-5 bg-dark">
       <div class="container">
-        <div class="text-center text-white my-5">
-          <h1>Contact Me</h1>
+        <div class="text-center text-white my-5" data-aos="fade-down">
+          <h1>Contact <span>Us</span></h1>
         </div>
-        <div class="row">
-          <div class="col-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1643582748833!2d106.9053212695394!3d-6.438023266949324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebbd7d726f4d%3A0x267ada501ca09f86!2sAufa%20Ramadhan!5e0!3m2!1sen!2sid!4v1704086484469!5m2!1sen!2sid"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="col-6">
-            <form action="">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Full Name</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Enter full name"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Enter email address"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Message</label
-                >
-                <textarea
-                  class="form-control res"
-                  id="exampleFormControlTextarea1"
-                  rows="4"
-                  cols="4"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-primary">Primary</button>
-              </div>
-            </form>
-          </div>
+        <div class="d-flex flex-column flex-md-row gap-3 flex-column-reverse">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1643582748833!2d106.9053212695394!3d-6.438023266949324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebbd7d726f4d%3A0x267ada501ca09f86!2sAufa%20Ramadhan!5e0!3m2!1sen!2sid!4v1704086484469!5m2!1sen!2sid"
+            class="maps mt-3"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            data-aos="fade-right"
+          ></iframe>
+          <form action="">
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlInput1"
+                class="form-label text-white"
+                >Full Name</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Enter full name"
+              />
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlInput1"
+                class="form-label text-white"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Enter email address"
+              />
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlTextarea1"
+                class="form-label text-white"
+                >Message</label
+              >
+              <textarea
+                class="form-control res"
+                id="exampleFormControlTextarea1"
+                rows="4"
+                cols="4"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end" data-aos="fade-up">
+              <button type="button" class="btn btn-primary">submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -358,9 +360,8 @@
     <!-- FOOTER -->
 
     <footer id="footer" class="bg-light text-center py-4">
-      <span>Made with <span> &#10084; </span>, </span>
       <span>© 2023 Copyright: </span>
-      <a> codefaa. </a>
+      <a> ZanCookies. </a>
     </footer>
 
     <!-- END FOOTER -->
@@ -369,16 +370,11 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-      document.addEventListener("alpine:init", () => {
-        Alpine.data("cls", () => ({
-          cls: [
-            { id: 1, label: "Red" },
-            { id: 2, label: "Orange" },
-            { id: 3, label: "Yellow" },
-          ],
-        }));
-      });
+      AOS.init();
     </script>
   </body>
 </html>
