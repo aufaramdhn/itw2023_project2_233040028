@@ -220,78 +220,71 @@
         <div class="text-center text-white my-5" data-aos="fade-down">
           <h1>Contact <span>Us</span></h1>
         </div>
-        <div class="row">
-          <div class="col-4 col-md-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1643582748833!2d106.9053212695394!3d-6.438023266949324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebbd7d726f4d%3A0x267ada501ca09f86!2sAufa%20Ramadhan!5e0!3m2!1sen!2sid!4v1704086484469!5m2!1sen!2sid"
-              class="maps mt-3"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              data-aos="fade-right"
-            ></iframe>
-          </div>
-          <div class="col-4 col-md-12">
-            <form action="" name="submit-to-google-sheet">
-              <div class="mb-3" data-aos="fade-up">
-                <label
-                  for="exampleFormControlInput1"
-                  class="form-label text-white"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter full name"
-                  name="nama"
-                  required
-                />
+        <div class="d-flex flex-column flex-md-row gap-3 flex-column-reverse">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1643582748833!2d106.9053212695394!3d-6.438023266949324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebbd7d726f4d%3A0x267ada501ca09f86!2sAufa%20Ramadhan!5e0!3m2!1sen!2sid!4v1704086484469!5m2!1sen!2sid"
+            class="maps mt-3"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            data-aos="fade-right"
+          ></iframe>
+          <form action="" name="submit-to-google-sheet">
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlInput1"
+                class="form-label text-white"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter full name"
+                name="nama"
+                required
+              />
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlInput1"
+                class="form-label text-white"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter email address"
+                name="email"
+                required
+              />
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label
+                for="exampleFormControlTextarea1"
+                class="form-label text-white"
+                >Message</label
+              >
+              <textarea
+                class="form-control"
+                rows="4"
+                cols="4"
+                placeholder="Enter your message"
+                name="pesan"
+                required
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end send" data-aos="fade-up">
+              <button type="submit" class="btn btn1">Submit</button>
+            </div>
+            <div class="loaders d-flex justify-content-end d-none">
+              <div class="wrap-loader" data-aos="fade-up">
+                <div class="loader"></div>
+                <span>loading...</span>
               </div>
-              <div class="mb-3" data-aos="fade-up">
-                <label
-                  for="exampleFormControlInput1"
-                  class="form-label text-white"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter email address"
-                  name="email"
-                  required
-                />
-              </div>
-              <div class="mb-3" data-aos="fade-up">
-                <label
-                  for="exampleFormControlTextarea1"
-                  class="form-label text-white"
-                  >Message</label
-                >
-                <textarea
-                  class="form-control"
-                  rows="4"
-                  cols="4"
-                  placeholder="Enter your message"
-                  name="pesan"
-                  required
-                ></textarea>
-              </div>
-              <div class="d-flex justify-content-end send" data-aos="fade-up">
-                <button type="submit" class="btn btn1">Submit</button>
-              </div>
-              <div class="loaders d-flex justify-content-end d-none">
-                <div class="wrap-loader" data-aos="fade-up">
-                  <div class="loader"></div>
-                  <span>loading...</span>
-                </div>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
-        <div
-          class="d-flex flex-column flex-md-row gap-3 flex-column-reverse"
-        ></div>
       </div>
       <div
         class="alert alert1 alert-success alert-dismissible fade show position-fixed d-none"
